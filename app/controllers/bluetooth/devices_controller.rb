@@ -14,7 +14,7 @@ module Bluetooth
     def test
       cpcl = BaseCpcl.new
       cpcl.text '打印机测试'
-      cpcl.right_qrcode('dayinjiceshi', y: 20)
+      cpcl.qrcode_right('dayinjiceshi', y: 20)
 
       render json: cpcl.render.bytes
     end
