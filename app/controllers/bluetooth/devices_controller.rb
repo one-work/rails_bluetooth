@@ -8,7 +8,8 @@ module Bluetooth
     end
 
     def err
-
+      @err = Err.new(err_msg: params.dig('message', 'errMsg'))
+      @err.save
     end
 
     def test
