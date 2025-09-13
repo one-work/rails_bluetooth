@@ -5,3 +5,5 @@ zh:
       devices:
         index:
           title: 蓝牙设备
+        scan:
+          title: 扫码添加

@@ -1,9 +1,13 @@
 <div
   data-controller="scan"
   data-action="click->scan#report"
-  class="button is-small is-rounded is-primary"
+  class="button is-rounded is-primary"
   data-report-url="<%= url_for(action: 'scan') %>"
 >
   <%= svg_tag 'plus' %>
-  <span class="ml-1">添加打印机</span>
+  <span class="ml-1"><%= t('.scan.title') %></span>
 </div>
+<%= button_to({ action: 'new' }, class: 'button is-rounded is-link') do %>
+  <%= svg_tag 'plus' %>
+  <span class="ml-1"><%= t('.new.title') %></span>
+<% end %>
