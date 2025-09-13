@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       collection do
         get :test
         post :err
+        post :scan
       end
     end
     namespace :admin, defaults: { namespace: 'admin' } do
