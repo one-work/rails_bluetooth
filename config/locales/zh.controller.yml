@@ -7,3 +7,5 @@ zh:
           title: 蓝牙打印
         scan:
           title: 扫码添加
+        destroy:
+          title: 解除绑定
