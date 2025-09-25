@@ -5,6 +5,8 @@ zh:
       devices:
         index:
           title: 蓝牙打印
+        new:
+          title: 手动添加
         scan:
           title: 扫码添加
         destroy:
