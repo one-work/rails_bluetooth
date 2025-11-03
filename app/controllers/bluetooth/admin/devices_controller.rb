@@ -2,11 +2,17 @@ module Bluetooth
   class Admin::DevicesController < Admin::BaseController
 
     def scan
-      @jia_bo_printer = @jia_bo_app.jia_bo_printers.find_or_initialize_by(device_id: params[:result])
-      @jia_bo_printer.organ = current_organ
-      @jia_bo_printer.devices.find_or_initialize_by(aim: 'produce')
-      @jia_bo_printer.devices.find_or_initialize_by(aim: 'receipt')
-      @jia_bo_printer.save
+      name, _ = params[:result].split('&')
+      @device = Device.new(device_params)
+      @device.name = name
+      @deivce.save
     end
+
+    private
+    def device_params
+      p = params.fetch(:device, {})
+      p.merge! default_params
+    end
+
   end
 end
