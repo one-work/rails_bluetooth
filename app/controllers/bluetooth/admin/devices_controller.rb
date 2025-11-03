@@ -10,7 +10,9 @@ module Bluetooth
 
     private
     def device_params
-      p = params.fetch(:device, {})
+      p = params.fetch(:device, {}).permit!(
+        :name
+      )
       p.merge! default_params
     end
 
